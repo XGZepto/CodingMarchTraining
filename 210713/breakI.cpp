@@ -18,7 +18,6 @@ void split_num(int n,int a,int k){
 			return;
 		}
 		if (vis[i] == 0){
-			//cout << i << " ";
 			a += i;
 			vis[i] = 1;
 			split_num(n,a,i);

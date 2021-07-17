@@ -37,15 +37,19 @@ void plant(int n,int a,int fa,int num){
 	}
 }
 
+int deg[maxn], ans;
+
 int main(){
 	int n;
 	cin >> n;
 	for (int i=0;i<n-1;i++){
 		int p,q;
 		cin >> p >> q;
-		to[p].push_back(q);
-		to[q].push_back(p);
+		ans = max(ans, max(++deg[p], ++deg[q]));
+		// to[p].push_back(q);
+		// to[q].push_back(p);
 	}
-	cnt += to[1].size();
-	plant(n,1,1,1+to[1].size());
+	// cnt += to[1].size();
+	// plant(n,1,1,1+to[1].size());
+	cout << ans;
 }
