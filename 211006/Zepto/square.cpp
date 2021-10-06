@@ -1,3 +1,7 @@
+// Square Permutation
+// Zepto
+// 06 Oct 2021
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -12,5 +16,5 @@ int main(){
         sort(buff.begin(), buff.end());
         ans += cnt[buff]++;
     }
-    printf("%lld", ans);
+    printf("%lld\n", ans);
 }
