@@ -19,13 +19,11 @@ int find_next(int x, int y, int (&cur_maze)[maxn][maxn]){
         int pot_y = y + next_y[i];
         if (pot_x < 1 || pot_x > N) continue;
         if (pot_y < 1 || pot_y > M) continue;
-        if (cur_maze[pot_x][pot_y] > local_max){
-            local_max = cur_maze[pot_x][pot_y];
+        if (cur_maze[pot_x][pot_y] > local_max)
+            local_max = cur_maze[pot_x][pot_y],
             res = i;
-        }
-        else if (cur_maze[pot_x][pot_y] == local_max){
+        else if (cur_maze[pot_x][pot_y] == local_max)
             res = -1;
-        }
     }
     return res;
 }
